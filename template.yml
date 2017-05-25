@@ -7,8 +7,8 @@ PROJECT_www:
     file: COMMON
     service: wp_files
   volumes:
-    - DOCROOT/sites/PROJECT/www:/var/www/html
-    - DOCROOT/sites/PROJECT/cachegrind:/tmp/cachegrind
+    - NIMBLE/sites/PROJECT/www:/var/www/html
+    - NIMBLE/sites/PROJECT/cachegrind:/tmp/cachegrind
 
 PROJECT:
   container_name: PROJECT
@@ -48,6 +48,6 @@ PROJECT_webgrind:
   environment:
     - VIRTUAL_HOST=webgrind.PROJECT.local
   volumes:
-    - DOCROOT/sites/PROJECT/cachegrind:/tmp
+    - NIMBLE/sites/PROJECT/cachegrind:/tmp
 
 ### PROJECT_end ###
