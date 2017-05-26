@@ -18,7 +18,7 @@ PROJECT:
   volumes_from:
     - PROJECT_www
   environment:
-    - VIRTUAL_HOST=PROJECT.local
+    - VIRTUAL_HOST=PROJECT.TLD
   links:
     - PROJECT_db:mysql
 
@@ -36,7 +36,7 @@ PROJECT_pma:
     file: COMMON
     service: wp_pma
   environment:
-    - VIRTUAL_HOST=phpmyadmin.PROJECT.local
+    - VIRTUAL_HOST=phpmyadmin.PROJECT.TLD
   links:
     - PROJECT_db:mysql
 
@@ -46,7 +46,7 @@ PROJECT_webgrind:
     file: COMMON
     service: wp_webgrind
   environment:
-    - VIRTUAL_HOST=webgrind.PROJECT.local
+    - VIRTUAL_HOST=webgrind.PROJECT.TLD
   volumes:
     - NIMBLE/sites/PROJECT/cachegrind:/tmp
 
