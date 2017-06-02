@@ -1,0 +1,14 @@
+{
+	// See http://go.microsoft.com/fwlink/?LinkId=827846
+	// for the documentation about the extensions.json format
+	"recommendations": [
+		"dbaeumer.vscode-eslint",
+		"msjsdiag.debugger-for-chrome",
+        "felixfbecker.php-intellisense",
+        "felixfbecker.php-debug",
+        "glen-84.sass-lint",
+		"waderyan.gitblame",
+		"PeterJausovec.vscode-docker",
+		"ms-vscode.PowerShell"
+	]
+}
