@@ -65,10 +65,6 @@ wp_db:
   environment:
     MYSQL_ROOT_PASSWORD: example
 
-wp_data:
-  image: mariadb
-  command: /bin/true
-
 wp_pma:
     image: phpmyadmin/phpmyadmin
     restart: always
