@@ -9,6 +9,7 @@ PROJECT_www:
   volumes:
     - NIMBLE/sites/PROJECT/www:/var/www/html
     - NIMBLE/sites/PROJECT/cachegrind:/tmp/cachegrind
+    - NIMBLE/sites/PROJECT/_conf/z-05-php-project.ini:/usr/local/etc/php/conf.d/z-05-php-project.ini
 
 PROJECT:
   container_name: PROJECT
