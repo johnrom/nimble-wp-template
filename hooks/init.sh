@@ -25,7 +25,8 @@ nimble_wp_init(){
     fi
 
     if [ -f "$dir/package.json" ]; then
-        npm_install
+        cd "$dir" && npm_install
+        cd -
     fi
 
     local url="$project.$tld"
