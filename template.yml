@@ -48,6 +48,6 @@ PROJECT_webgrind:
   environment:
     - VIRTUAL_HOST=webgrind.PROJECT.TLD
   volumes:
-    - NIMBLE/sites/PROJECT/cachegrind:/tmp
+    - NIMBLE/sites/PROJECT/cachegrind:/tmp/xdebug
 
 ### PROJECT_end ###

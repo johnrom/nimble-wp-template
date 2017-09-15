@@ -79,7 +79,7 @@ wp_pma:
       - "443"
 
 wp_webgrind:
-    image: clue/webgrind
+    image: devgeniem/webgrind
     restart: always
     expose:
       - "80"

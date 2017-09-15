@@ -1,3 +1,6 @@
+#
+# Initialize tests for this project
+#
 
 # requires project name
 if [[ -z "$2" ]]; then
@@ -15,4 +18,8 @@ local type="$4"
 local name="$5"
 local inner_dir="/var/www/html"
 
-bashitup "$project" "export WP_CORE_DIR=$inner_dir/ && cd $inner_dir/wp-content/${type}s/$name && export WP_TESTS_DIR=./tests/mock && XDEBUG_CONFIG='' phpunit ${*:6}"
+# download files
+nimble create-tests "$project" "$type" "$name"
+
+# install db
+nimble install-tests "$project" "$type" "$name"
