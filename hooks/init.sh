@@ -15,12 +15,12 @@ nimble_wp_init(){
         ask repo "Enter the Github repo (e.g., johnrom/nimble-wp-template)" "" --required
 
         if [[ ! -z "$repo" ]]; then
-            echo "Cloning git@github.com:$repo.git ..."
-            clone "$project" "git@github.com:$repo.git"
+            echo "Cloning https://github.com/$repo.git ..."
+            clone "$project" "https://github.com/$repo.git"
         fi
     else
         if confirm "Clone NimbleBones?" Y; then
-            clone $project "git@github.com:nimblelight/nimblebones.git"
+            clone $project "https://github.com/nimblelight/nimblebones.git"
         fi
     fi
 
