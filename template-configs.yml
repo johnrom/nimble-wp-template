@@ -1,0 +1,47 @@
+x-wp_files:
+  &wp_files
+  image: johnrom/docker-wordpress-wp-cli-xdebug:latest
+  command: /bin/true
+
+x-wp_site:
+  &wp_site
+  restart: always
+  image: johnrom/docker-wordpress-wp-cli-xdebug:latest
+  working_dir: /var/www/html
+  expose:
+    - "80"
+    - "443"
+  environment:
+    - HTTPS_METHOD=noredirect
+    - XDEBUG_CONFIG
+
+x-wp_db:
+  &wp_db
+  restart: always
+  image: mariadb
+  environment:
+    MYSQL_ROOT_PASSWORD: example
+
+x-wp_pma:
+  &wp_pma
+  image: phpmyadmin/phpmyadmin
+  restart: always
+  environment:
+    - HTTPS_METHOD=noredirect
+    - PMA_HOST=mysql
+    - PMA_USER=root
+    - PMA_PASSWORD=example
+    - PHP_UPLOAD_MAX_FILESIZE=256M
+  expose:
+    - "80"
+    - "443"
+
+x-wp_webgrind:
+  &wp_webgrind
+  image: devgeniem/webgrind
+  restart: always
+  expose:
+    - "80"
+    - "443"
+  environment:
+    - HTTPS_METHOD=noredirect

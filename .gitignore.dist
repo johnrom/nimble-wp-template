@@ -1,2 +1,50 @@
-/www
 /cachegrind
+
+# wordpress
+www/wp-config.php
+www/wp-content/uploads/
+www/wp-content/themes/twenty*/
+
+# os files
+ehthumbs.db
+Thumbs.db
+
+# node and npm
+node_modules
+npm-debug.log
+
+# misc file types
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+lib-cov
+*.seed
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
