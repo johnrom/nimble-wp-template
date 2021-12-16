@@ -11,6 +11,8 @@ nimble_wp_init(){
         local dir="$site_root/$project/www"
     fi
 
+    mkdir -p "$dir"
+
     if confirm "Would you like to clone a repo?" Y; then
         ask repo "Enter the Github repo (e.g., johnrom/nimble-wp-template)" "" --required
 
