@@ -34,6 +34,9 @@ nimble_wp_init(){
     local url="$project.$tld"
 
     if confirm "Would you like to install WordPress?" Y; then
+        echo "Making sure project initialization has taken place, generating wp-config.php."
+        restart
+        
         echo "Installing WP to $dir -> $url"
 
         ask title "Site Title" "$project"
